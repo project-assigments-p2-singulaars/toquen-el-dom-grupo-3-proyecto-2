@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toquen el DOM</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
-  </head>
+</head>
+
 <body>
-  <h1>Toquen el DOM</h1>
-  <ul>
-    <li data-note="Q" class="key-white"></li>
-    <li data-note="W" class="key-black"></li>
-  </ul>
-  
+  <section>
+    <h1>Toquen el DOM</h1>
+  </section>
+<section id="Dashboard">
+  <div class="volume-slider">
+    <span>Volume</span> <input type="range">
+    <div class ="Key-shortcuts">
+      <span>Legend & Shortcuts</span> <input type="checkbox">
+    </div>
+  </div>
+</section>
+
+  <section id="piano-keys">
+    <ul class="octave" id="octave--1">
+      <li data-note="Q" class="key-white key"><span>Q</span><span>DO</span></li>
+      <li data-note="x" class="key-black key"><span>X</span></li>
+      <li data-note="w" class="key-white key"><span>W</span><span>RE</span></li>
+      <li data-note="c" class="key-black key"><span>C</span></li>
+      <li data-note="e" class="key-white key"><span>R</span><span>MI</span></li>
+      <li data-note="r" class="key-white key"><span>R</span><span>FA</span></li>
+      <li data-note="v" class="key-black key"><span>V</span></li>
+      <li data-note="t" class="key-white key"><span>T</span><span>SOL</span></li>
+      <li data-note="b" class="key-black key"><span>B</span></li>
+      <li data-note="y" class="key-white key"><span>Y</span><span>LA</span></li>
+      <li data-note="n" class="key-black key"><span>N</span></li>
+      <li data-note="u" class="key-white key"><span>U</span><span>SI</span></li>
+    </ul>
+    <ul class="octave" id="octave--2">
+      <li data-note="i" class="key-white key"></li>
+      <li data-note="m" class="key-black key"></li>
+      <li data-note="o" class="key-white key"></li>
+      <li data-note="1" class="key-black key"></li>
+      <li data-note="p" class="key-white key"></li>
+      <li data-note="a" class="key-white key"></li>
+      <li data-note="2" class="key-black key"></li>
+      <li data-note="s" class="key-white key"></li>
+      <li data-note="3" class="key-black key"></li>
+      <li data-note="d" class="key-white key"></li>
+      <li data-note="4" class="key-black key"></li>
+      <li data-note="f" class="key-white key"></li>
+    </ul>
+    <ul class="octave" id="octave--3">
+      <li data-note="g" class="key-white key"></li>
+      <li data-note="5" class="key-black key"></li>
+      <li data-note="h" class="key-white key"></li>
+      <li data-note="6" class="key-black key"></li>
+      <li data-note="j" class="key-white key"></li>
+      <li data-note="k" class="key-white key"></li>
+      <li data-note="7" class="key-black key"></li>
+      <li data-note="l" class="key-white key"></li>
+      <li data-note="8" class="key-black key"></li>
+      <li data-note="ñ" class="key-white key"></li>
+      <li data-note="9" class="key-black key"></li>
+      <li data-note="z" class="key-white key"></li>
+    </ul>
+  </section>
+
+
 </body>
+
 </html>

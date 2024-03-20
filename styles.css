@@ -1,47 +1,86 @@
+:root {
+  /* Colors */
+  --color-black-1: black;
+  --color-black-brown: #777171;
+  --color_white: white;
+  --color_yellow-1: #777171;
+  --color_grey-1: #2E2F2F;
+  
+  /* Elements */
 
-:root{
+  --color_background__key-white--default: var(--color_white);
+  --color_text__key-white--default: var(--color-black-1);
 
-    /* Colors */
-    --color-black-1: black;
-    --color-black-brown: #777171;
-    --color_white: white;
-    --color_yellow-1: #777171;
+  --color_key-white--pushed: var(--color_yellow-1);
+  --color_Key-black--pushed: var(--color-black-brown);
 
-
-    /* Elements */
-
-    --color-background__key-white--default: var(--color_white);
-    --color-text__key-white--default: var(--color-black-1);
-
-    --color__key-white--pushed: var(--color_yellow-1);
-    --color-Key-black--pushed: var(--color-black-brown);
-
+  --color_backround_dashboard: var(var(--color_grey-1))
 }
 
-/*color */ 
+/*color */
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-direction: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+#dashboard {
+    background-color: var(--color_backround_dashboard);
+    border-radius: 25px;
+    display: grid;
+   
+}
+
+#piano-keys {
+  display: flex;
+  flex-direction: flex-start;
+}
+
+
+
+/* #region Keyboard */
+
+.octave {
+  display: flex;
+  position: relative;
+}
+
+
+/* #endregion */
 
 /* #region Keys */
 
 li {
-    display: inline-block;
-    text-decoration: none;
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
 }
 
+.key span{
+    text-align: center;
+}
 
 .key-white {
-    width: 63px;
-    height: 246px;
-    border-radius: 15px;
-    border: 2px solid var(--color-black-1);
-    color: var(--color-text__key-white--default);
-    background-color: var(--color-background__key-white--default);
+  width: 50px;
+  height: 240px;
+  border-radius: 15px;
+  border: 2px solid var(--color-black-1);
+  color: var(--color-text__key-white--default);
+  background-color: var(--color_background__key-white--default);
 }
 
 .key-black {
-    width: 44px;
-    height: 143px;
-    background-color: var(--color-black-1);
-    border-radius: 10px;
+  width: 40px;
+  height: 120px;
+  background-color: var(--color-black-1);
+  border-radius: 10px;
+  z-index: 2;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 /* #endregion */
