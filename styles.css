@@ -3,8 +3,11 @@
   --color-black-1: black;
   --color-black-brown: #777171;
   --color_white: white;
-  --color_yellow-1: #777171;
+  --color_yellow-1: #FFFDD1;
   --color_grey-1: #2E2F2F;
+  --color_grey-2: #9F9090;
+
+
   
   /* Elements */
 
@@ -14,7 +17,9 @@
   --color_key-white--pushed: var(--color_yellow-1);
   --color_Key-black--pushed: var(--color-black-brown);
 
-  --color_backround_dashboard: var(var(--color_grey-1))
+  --color_backround_keyboard_base: var(--color_grey-1);
+  --color_keyboard_base_text: var(var(--color_grey-2))
+
 }
 
 /*color */
@@ -27,11 +32,19 @@ body {
   align-items: center;
 }
 
-#dashboard {
-    background-color: var(--color_backround_dashboard);
+#keyboard_base {
+    background-color:var(--color_backround_keyboard_base);
     border-radius: 25px;
-    display: grid;
-   
+    padding: 100px, 15px,15px, 15px;
+    
+}
+
+#kebyboard_base_buttons {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+color: var(--color_keyboard_base_text);
+font-family: inter;
 }
 
 #piano-keys {
@@ -74,6 +87,12 @@ li {
   background-color: var(--color_background__key-white--default);
 }
 
+@media (min-width: 1000px) {
+    .key-white:hover {
+         background: var(--color_key-white--pushed);
+     }
+    }
+
 .key-black {
   width: 40px;
   height: 120px;
@@ -84,5 +103,11 @@ li {
   margin-left: -20px;
   margin-right: -20px;
 }
+
+@media (min-width: 1000px) {
+    .key-black:hover {
+         background: var(--color_Key-black--pushed);
+     }
+    }
 
 /* #endregion */
