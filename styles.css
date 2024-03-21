@@ -18,7 +18,7 @@
   --color_Key-black--pushed: var(--color-black-brown);
 
   --color_backround_keyboard_base: var(--color_grey-1);
-  --color_keyboard_base_text: var(var(--color_grey-2))
+  --color_keyboard_base_text: var(--color_grey-2)
 
 }
 
@@ -35,7 +35,7 @@ body {
 #keyboard_base {
     background-color:var(--color_backround_keyboard_base);
     border-radius: 25px;
-    padding: 100px, 15px,15px, 15px;
+    padding: 100px, 15px, 15px, 15px;
     
 }
 
@@ -43,13 +43,13 @@ body {
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
-color: var(--color_keyboard_base_text);
-font-family: inter;
+color: var(--color_Key-black--pushed);
 }
 
 #piano-keys {
   display: flex;
-  flex-direction: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
@@ -111,3 +111,28 @@ li {
     }
 
 /* #endregion */
+
+@media only screen and (max-width: 600px) {
+  .key-white {
+    width: 25px;
+    height: 120px;
+    border-radius: 10px;
+    font-size: 9px;
+  }
+  .key-black {
+    width: 20px;
+    height: 60px;
+    border-radius: 5px;
+    z-index: 2;
+    margin-left: -10px;
+    margin-right: -10px;
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  body  { transform: rotate(-90deg);
+    height: 100vh;}
+  
+}
+ 
