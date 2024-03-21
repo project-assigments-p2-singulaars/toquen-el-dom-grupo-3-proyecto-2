@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
+  <script type="module" src="./src/components/AppElement/app-element.js"></script>
+  <script type="module" src="./src/components/AppElement/parent-element.js"></script>
   <title>Toquen el DOM</title>
 </head>
 <body>
   <h1>Toquen el DOM</h1>
-
   <p>Test de encapsulamiento CSS</p>
 
+  <!-- <parent-element>
+    <app-element slot="app-element">
+    </app-element>
+  </parent-element> -->
+
+
+
+  <parent-element>
+  </parent-element>
+
+  <app-element>
+    <span slot="span-global" class="text">jiji</span>
+  </app-element>
+  
   <section>
     <!-- <keyboard-key shortcut="O" note="Do" sound-src="./src/assets/audio/piano/100.mp3"></keyboard-key>
     <keyboard-key shortcut="B" note="Re" sound-src="./src/assets/audio/piano/101.mp3"></keyboard-key> -->
