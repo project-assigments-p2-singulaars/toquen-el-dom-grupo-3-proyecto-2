@@ -38,18 +38,10 @@ import styles from './keyboard-key.css' assert { type: 'css' };
 
     }
 
-    disconnectedCallback() {
-      // console.log('Custom element removed from page.');
-    }
-
-    adoptedCallback() {
-      // console.log('Custom element moved to new page.')
-    }
-
     render() {
       this.shadow.innerHTML = /* html */`
-        ${ this.keyType == 'whiteKey' && this.keyWhite() }
-        ${ this.keyType == 'blackKey' && this.keyBlack() }
+        ${ this.keyType == 'whiteKey' ? this.keyWhite() : '' }
+        ${ this.keyType == 'blackKey' ? this.keyBlack() : '' }
       `;
     }
 
