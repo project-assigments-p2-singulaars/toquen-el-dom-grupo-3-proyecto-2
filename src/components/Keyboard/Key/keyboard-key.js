@@ -1,3 +1,4 @@
+import styles from './keyboard-key.css' assert { type: 'css' };
 
   export class KeyboardKey extends HTMLElement {
 
@@ -7,36 +8,34 @@
       this.shortcut;
       this.note;
       this.soundSrc;
+      this.keyType;
     }
 
     static get observedAttributes(){
-      return ['shortcut', 'note', 'sound-src'];
+      return ['shortcut', 'note', 'sound-src', 'key-type'];
     }
 
     playSound( e ){
-
       if( e.type == 'keypress' && e.key.toUpperCase() == this.shortcut.toUpperCase() ){
-        console.log('key pressed');
-        console.log( e.key, this.note );
-
         const sound = new Audio( this.soundSrc );
         sound.play();
-
         return;
+
       } else if( e.type == 'click' ){
-        console.log('key clicked' + e);
         const sound = new Audio( this.soundSrc );
         sound.play();
+        return;
       }
-
     }
 
     connectedCallback() {
+      this.shadow.adoptedStyleSheets.push( styles );
       this.render();
-      
-      let key = this.shadow.querySelector('.octave__key-white');
+
+      let key = this.shadow.querySelector('.key');
       key.addEventListener('click', this.playSound.bind( this ));
       document.addEventListener('keypress', this.playSound.bind( this ));
+
     }
 
     disconnectedCallback() {
@@ -49,28 +48,26 @@
 
     render() {
       this.shadow.innerHTML = /* html */`
-        <style>
-          :host {
-            --color-black: black;
-            --color-white: white;
-          }
+        ${ this.keyType == 'whiteKey' && this.keyWhite() }
+        ${ this.keyType == 'blackKey' && this.keyBlack() }
+      `;
+    }
 
-          .octave__key-white{
-            display: flex;
-            width: 50px;
-            height: 150px;
-            background-color: var(--color-white);
-            border: 2px solid var(--color-black)
-          }
-
-        </style>
-
-
-        <div class='octave__key-white' data-note=${this.note}>
-          <p class='test'>Test</p>
+    keyWhite(){
+      return /* html */`
+        <li data-note=${this.note} class="key-white key">
           <span class='key__shortcut'>${this.shortcut}</span>
           <span class='key__note'>${this.note}</span>
-        </div>
+        </li>
+      `;
+    }
+
+    keyBlack(){
+      return /* html */`
+        <li data-note=${this.note} class="key-black key">
+          <span class='key__shortcut'>${this.shortcut}</span>
+          <span class='key__note'>${this.note}</span>
+        </li>
       `;
     }
 
@@ -86,7 +83,10 @@
         case 'sound-src':
           this.soundSrc = newValue;
           break;
+        case 'key-type':
+          this.keyType = newValue;
       }
+
     }
 
   }

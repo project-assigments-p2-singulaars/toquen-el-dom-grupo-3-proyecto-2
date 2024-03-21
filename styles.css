@@ -6,16 +6,11 @@
   --color_yellow-1: #FFFDD1;
   --color_grey-1: #2E2F2F;
   --color_grey-2: #9F9090;
-
-
-html, body {
-    height: 95%;
-    margin: 0;
 }
 
 
 :root{
-  
+
   /* Elements */
 
   --color_background__key-white--default: var(--color_white);
@@ -29,24 +24,17 @@ html, body {
 
 }
 
-/*color */
- 
-
-body {
-  display: flex;
-  flex-direction: column;
-  flex-direction: flex-start;
-  justify-content: center;
-  align-items: center;
+*{
+  box-sizing: border-box;
 }
-  
+
+/*color */
+
 /* #region Keyboard */
 
 #keyboard_base {
-    background-color:var(--color_backround_keyboard_base);
-    border-radius: 25px;
-    padding: 100px, 15px, 15px, 15px;
-    
+  border-radius: 25px;
+  background-color:var(--color_backround_keyboard_base);
 }
 
 #kebyboard_base_buttons {
@@ -70,7 +58,7 @@ body {
 
 /* #endregion */
 
-  
+
 /* #region Keys */
 
 li {
@@ -82,7 +70,7 @@ li {
 }
 
 .key span{
-    text-align: center;
+  text-align: center;
 }
 
 .key-white {
@@ -107,24 +95,23 @@ li {
 
 .key-black:hover {
   background: var(--color_Key-black--pushed);
- }
-  
-.key-white:hover {
-   background: var(--color_key-white--pushed);
- }
-
-/* #endregion */
-  
-  
-footer{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 5rem;
-    margin-right: 2rem;
 }
 
-  
+.key-white:hover {
+  background: var(--color_key-white--pushed);
+}
+
+/* #endregion */
+
+footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5rem;
+  margin-right: 2rem;
+}
+
+
 @media only screen and (max-width: 600px) {
   .key-white {
     width: 25px;
@@ -143,9 +130,13 @@ footer{
   }
 }
 
-@media only screen and (max-width: 480px){
-  body  { transform: rotate(-90deg);
-    height: 100vh;}
+
+@media screen and (orientation: portrait) and (width < 540px){
+  /* body{
+    background: red;
+  } */
 }
- 
+
+
+
 
