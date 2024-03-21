@@ -48,7 +48,7 @@
     }
 
     render() {
-      this.shadow.innerHTML = `
+      this.shadow.innerHTML = /* html */`
         <style>
           :host {
             --color-black: black;
@@ -62,9 +62,12 @@
             background-color: var(--color-white);
             border: 2px solid var(--color-black)
           }
+
         </style>
 
+
         <div class='octave__key-white' data-note=${this.note}>
+          <p class='test'>Test</p>
           <span class='key__shortcut'>${this.shortcut}</span>
           <span class='key__note'>${this.note}</span>
         </div>
