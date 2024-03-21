@@ -55,6 +55,7 @@ li {
    color: var(--color_white);
    background-color: var(--color-black-1);
    border-radius: 10px;
+   position: absolute;
    z-index: 2;
    margin-left: -20px;
    margin-right: -20px;
