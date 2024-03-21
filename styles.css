@@ -1,68 +1,142 @@
-
-html, body {
-    height: 95%;
-    margin: 0;
+:root {
+  /* Colors */
+  --color-black-1: black;
+  --color-black-brown: #777171;
+  --color_white: white;
+  --color_yellow-1: #FFFDD1;
+  --color_grey-1: #2E2F2F;
+  --color_grey-2: #9F9090;
 }
 
-
-main{
-    height: 100%;
-}
 
 :root{
 
-    /* Colors */
-    --color-black-1: black;
-    --color-black-brown: #777171;
-    --color_white: white;
-    --color_yellow-1: #777171;
+  /* Elements */
 
+  --color_background__key-white--default: var(--color_white);
+  --color_text__key-white--default: var(--color-black-1);
 
-    /* Elements */
+  --color_key-white--pushed: var(--color_yellow-1);
+  --color_Key-black--pushed: var(--color-black-brown);
 
-    --color-background__key-white--default: var(--color_white);
-    --color-text__key-white--default: var(--color-black-1);
-
-    --color__key-white--pushed: var(--color_yellow-1);
-    --color-Key-black--pushed: var(--color-black-brown);
+  --color_backround_keyboard_base: var(--color_grey-1);
+  --color_keyboard_base_text: var(--color_grey-2)
 
 }
 
-/*color */ 
-
-/* #region Keys */
-
-li {
-    display: inline-block;
-    text-decoration: none;
+*{
+  box-sizing: border-box;
 }
 
+/*color */
 
-.key-white {
-    width: 63px;
-    height: 246px;
-    border-radius: 15px;
-    border: 2px solid var(--color-black-1);
-    color: var(--color-text__key-white--default);
-    background-color: var(--color-background__key-white--default);
+/* #region Keyboard */
+
+#keyboard_base {
+  border-radius: 25px;
+  background-color:var(--color_backround_keyboard_base);
 }
 
-.key-black {
-    width: 44px;
-    height: 143px;
-    background-color: var(--color-black-1);
-    border-radius: 10px;
+#kebyboard_base_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: var(--color_Key-black--pushed);
 }
+
+#piano-keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.octave {
+  display: flex;
+  position: relative;
+}
+
 
 /* #endregion */
 
 
-footer{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 5rem;
-    margin-right: 2rem;
+/* #region Keys */
 
+li {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ text-transform: capitalize;
 }
+
+.key span{
+  text-align: center;
+}
+
+.key-white {
+  width: 50px;
+  height: 240px;
+  border-radius: 15px;
+  border: 2px solid var(--color-black-1);
+  color: var(--color-text__key-white--default);
+  background-color: var(--color_background__key-white--default);
+}
+
+.key-black {
+  width: 40px;
+  height: 120px;
+  color: var(--color_white);
+  background-color: var(--color-black-1);
+  border-radius: 10px;
+  z-index: 2;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.key-black:hover {
+  background: var(--color_Key-black--pushed);
+}
+
+.key-white:hover {
+  background: var(--color_key-white--pushed);
+}
+
+/* #endregion */
+
+footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5rem;
+  margin-right: 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .key-white {
+    width: 25px;
+    height: 120px;
+    border-radius: 10px;
+    font-size: 9px;
+  }
+  .key-black {
+    width: 20px;
+    height: 60px;
+    border-radius: 5px;
+    z-index: 2;
+    margin-left: -10px;
+    margin-right: -10px;
+    font-size: 9px;
+  }
+}
+
+
+@media screen and (orientation: portrait) and (width < 540px){
+  /* body{
+    background: red;
+  } */
+}
+
+
+
 

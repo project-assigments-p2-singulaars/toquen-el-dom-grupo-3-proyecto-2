@@ -1,33 +1,83 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toquen el DOM</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
-  <title>Toquen el DOM</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- <link rel="stylesheet" href="styles2.css"> -->
 </head>
+
 <body>
   <main>
-    <h1>Toquen el DOM</h1>
-    <ul>
-      <li data-note="Q" class="key-white"></li>
-      <li data-note="W" class="key-black"></li>
-    </ul>
+    <section id="keyboard_base">
+      <div id="kebyboard_base_buttons">
+        <div class="volume-slider">
+          <input type="range"> <span>Volume</span>
+        </div>
+        <div class="key-shortcuts">
+          <input type="checkbox"> <span>Legend & Shortcuts</span>
+        </div>
+      </div>
+
+      </div>
+      <section id="piano-keys">
+        <ul class="octave" id="octave--1">
+          <li data-note="Q" class="key-white key"><span>Q</span><span>DO</span></li>
+          <li data-note="x" class="key-black key"><span>X</span></li>
+          <li data-note="w" class="key-white key"><span>W</span><span>RE</span></li>
+          <li data-note="c" class="key-black key"><span>C</span></li>
+          <li data-note="e" class="key-white key"><span>R</span><span>MI</span></li>
+          <li data-note="r" class="key-white key"><span>R</span><span>FA</span></li>
+          <li data-note="v" class="key-black key"><span>V</span></li>
+          <li data-note="t" class="key-white key"><span>T</span><span>SOL</span></li>
+          <li data-note="b" class="key-black key"><span>B</span></li>
+          <li data-note="y" class="key-white key"><span>Y</span><span>LA</span></li>
+          <li data-note="n" class="key-black key"><span>N</span></li>
+          <li data-note="u" class="key-white key"><span>U</span><span>SI</span></li>
+        </ul>
+        <ul class="octave" id="octave--2">
+          <li data-note="i" class="key-white key"><span>i</span><span>DO</span></li>
+          <li data-note="m" class="key-black key"><span>m</span></li>
+          <li data-note="o" class="key-white key"><span>o</span><span>RE</span></li>
+          <li data-note="1" class="key-black key"><span>1</span></li>
+          <li data-note="p" class="key-white key"><span>p</span><span>MI</span></li>
+          <li data-note="a" class="key-white key"><span>a</span><span>FA</span></li>
+          <li data-note="2" class="key-black key"><span>2</span></li>
+          <li data-note="s" class="key-white key"><span>s</span><span>SOL</span></li>
+          <li data-note="3" class="key-black key"><span>3</span></li>
+          <li data-note="d" class="key-white key"><span>d</span><span>LA</span></li>
+          <li data-note="4" class="key-black key"><span>4</span></li>
+          <li data-note="f" class="key-white key"><span>f</span><span>SI</span></li>
+        </ul>
+        <ul class="octave" id="octave--3">
+          <li data-note="g" class="key-white key"><span>g</span><span>DO</span></li>
+          <li data-note="5" class="key-black key"><span>5</span></li>
+          <li data-note="h" class="key-white key"><span>h</span><span>RE</span></li>
+          <li data-note="6" class="key-black key"><span>6</span></li>
+          <li data-note="j" class="key-white key"><span>j</span><span>MI</span></li>
+          <li data-note="k" class="key-white key"><span>k</span><span>FA</span></li>
+          <li data-note="7" class="key-black key"><span>7</span></li>
+          <li data-note="l" class="key-white key"><span>l</span><span>SOL</span></li>
+          <li data-note="8" class="key-black key"><span>8</span></li>
+          <li data-note="ñ" class="key-white key"><span>ñ</span><span>LA</span></li>
+          <li data-note="9" class="key-black key"><span>9</span></li>
+          <li data-note="z" class="key-white key"><span>z</span><span>SI</span></li>
+        </ul>
+      </section>
+    </section>
   </main>
+
   <footer>
     <a href="https://www.facebook.com/" target="_blank"><img src="src\assets\img\facebookLogo.png" alt="logo de facebook"></a>
     <a href="mailto:toqueneldom@gmail.com"><img src="src\assets\img\emailLogo.png" alt="logo de email"></a>
     <a href="https://www.instagram.com/" target="_blank"><img src="src\assets\img\instagramLogo.png" alt="logo de instagram"></a>
   </footer>
 
-  <p>Test de encapsulamiento CSS</p>
-
-  <section>
-    <!-- <keyboard-key shortcut="O" note="Do" sound-src="./src/assets/audio/piano/100.mp3"></keyboard-key>
-    <keyboard-key shortcut="B" note="Re" sound-src="./src/assets/audio/piano/101.mp3"></keyboard-key> -->
-  </section>
-  
 </body>
+
 </html>
