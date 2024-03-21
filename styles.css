@@ -8,6 +8,13 @@
   --color_grey-2: #9F9090;
 
 
+html, body {
+    height: 95%;
+    margin: 0;
+}
+
+
+:root{
   
   /* Elements */
 
@@ -23,6 +30,7 @@
 }
 
 /*color */
+ 
 
 body {
   display: flex;
@@ -31,6 +39,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+  
+/* #region Keyboard */
 
 #keyboard_base {
     background-color:var(--color_backround_keyboard_base);
@@ -40,10 +50,10 @@ body {
 }
 
 #kebyboard_base_buttons {
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-color: var(--color_Key-black--pushed);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: var(--color_Key-black--pushed);
 }
 
 #piano-keys {
@@ -51,10 +61,6 @@ color: var(--color_Key-black--pushed);
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
-
-/* #region Keyboard */
 
 .octave {
   display: flex;
@@ -64,6 +70,7 @@ color: var(--color_Key-black--pushed);
 
 /* #endregion */
 
+  
 /* #region Keys */
 
 li {
@@ -87,12 +94,6 @@ li {
   background-color: var(--color_background__key-white--default);
 }
 
-@media (min-width: 1000px) {
-    .key-white:hover {
-         background: var(--color_key-white--pushed);
-     }
-    }
-
 .key-black {
   width: 40px;
   height: 120px;
@@ -104,14 +105,26 @@ li {
   margin-right: -20px;
 }
 
-@media (min-width: 1000px) {
-    .key-black:hover {
-         background: var(--color_Key-black--pushed);
-     }
-    }
+.key-black:hover {
+  background: var(--color_Key-black--pushed);
+ }
+  
+.key-white:hover {
+   background: var(--color_key-white--pushed);
+ }
 
 /* #endregion */
+  
+  
+footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5rem;
+    margin-right: 2rem;
+}
 
+  
 @media only screen and (max-width: 600px) {
   .key-white {
     width: 25px;
@@ -133,6 +146,6 @@ li {
 @media only screen and (max-width: 480px){
   body  { transform: rotate(-90deg);
     height: 100vh;}
-  
 }
  
+
