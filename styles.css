@@ -10,6 +10,31 @@
   --color_grey-2: #9F9090;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-left: 5rem;
+}
+
+.toquenElDomTitle {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 :root{
 
