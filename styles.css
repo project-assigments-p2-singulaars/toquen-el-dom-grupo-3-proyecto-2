@@ -1,19 +1,4 @@
 
-body {
-    background-image: linear-gradient(to bottom, #f3fcf3, #dbf4db, #c3ecc3, #abe4aa, #92db92);
-    height: 100vh;
-}
-
-header {
-    height: 10%;
-    background-color: aqua;
-}
-
-main {
-    height: 80%;
-    background-color: aliceblue;
-}
-
 
 :root {
   /* Colors */
@@ -45,7 +30,22 @@ main {
   box-sizing: border-box;
 }
 
-/*color */
+body {
+    background-image: linear-gradient(to top, #92db92, #abe4aa, #c3ecc3, #dbf4db, #f3fcf3);
+    height: 100vh;
+}
+
+header {
+    height: 10%;
+    background-color: aqua;
+}
+
+main {
+    height: 80%;
+    background-color: aliceblue;
+}
+
+
 
 /* #region Keyboard */
 
@@ -119,15 +119,48 @@ li {
 }
 
 /* #endregion */
+  
+  
+.cards{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 14em;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    overflow-x: scroll;
+}
+
+.card__title{
+    background-color: rgba(255, 199, 222, 0.945);
+    padding: 2rem;
+    margin-top: -18px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.cards__card {
+    flex-shrink: 0;
+    width: 20vw;
+    border-radius: 20px;
+    
+}
+
+.card__image {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
 
 footer{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 5rem;
-  margin-right: 2rem;
-  height: 10%;
-  background-color: rebeccapurple;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5rem;
+    margin-right: 2rem;
+    height: 10%;
+    background-color: rebeccapurple;
 }
 
 
@@ -155,7 +188,4 @@ footer{
     background: red;
   } */
 }
-
-
-
 
