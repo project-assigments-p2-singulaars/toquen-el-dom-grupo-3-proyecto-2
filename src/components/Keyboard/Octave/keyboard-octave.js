@@ -172,6 +172,82 @@ import styles from './keyboard-octave.css' assert { type: 'css' };
         }
       ]
     }
+    getThirdOctaveKeys(){
+      return [
+        {
+          shortcut: 'B',
+          note: 'Do',
+          soundSrc: './src/assets/audio/piano/45.mp3',
+          keyType: 'whiteKey'
+        },
+        {
+          shortcut: 'H',
+          note: 'Sos1',
+          soundSrc: './src/assets/audio/piano/46.mp3',
+          keyType: 'blackKey'
+        },
+        {
+          shortcut: 'N',
+          note: 'Re',
+          soundSrc: './src/assets/audio/piano/47.mp3',
+          keyType: 'whiteKey',
+        },
+        {
+          shortcut: 'J',
+          note: 'Sos2',
+          soundSrc: './src/assets/audio/piano/48.mp3',
+          keyType: 'blackKey'
+        },
+        {
+          shortcut: 'M',
+          note: 'Mi',
+          soundSrc: './src/assets/audio/piano/49.mp3',
+          keyType: 'whiteKey',
+        },
+        {
+          shortcut: ',',
+          note: 'Fa',
+          soundSrc: './src/assets/audio/piano/50.mp3',
+          keyType: 'whiteKey'
+        },
+        {
+          shortcut: 'L',
+          note: 'Sos3',
+          soundSrc: './src/assets/audio/piano/51.mp3',
+          keyType: 'blackKey'
+        },
+        {
+          shortcut: '.',
+          note: 'Sol',
+          soundSrc: './src/assets/audio/piano/52.mp3',
+          keyType: 'whiteKey',
+        },
+        {
+          shortcut: 'Ñ',
+          note: 'Sos4',
+          soundSrc: './src/assets/audio/piano/53.mp3',
+          keyType: 'blackKey'
+        },
+        {
+          shortcut: '-',
+          note: 'La',
+          soundSrc: './src/assets/audio/piano/54.mp3',
+          keyType: 'whiteKey'
+        },
+        {
+          shortcut: '´',
+          note: 'Sos5',
+          soundSrc: './src/assets/audio/piano/55.mp3',
+          keyType: 'blackKey'
+        },
+        {
+          shortcut: 'Ç',
+          note: 'Si',
+          soundSrc: './src/assets/audio/piano/56.mp3',
+          keyType: 'whiteKey'
+        }
+      ]
+    }
 
     getOctave( octave ){
       let keys;
@@ -183,6 +259,8 @@ import styles from './keyboard-octave.css' assert { type: 'css' };
         case '2':
           keys = this.getSecondOctaveKeys();
           break;
+        case '3':
+          keys = this.getThirdOctaveKeys();
       }
 
       let octaveTemplate = ``;
