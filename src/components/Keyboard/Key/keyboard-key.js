@@ -5,6 +5,7 @@ import styles from './keyboard-key.css' assert { type: 'css' };
     constructor() {
       super();
       this.shadow = this.attachShadow({ mode: 'open' });
+      this.legendData = null;
       this.shortcut;
       this.note;
       this.soundSrc;
@@ -13,6 +14,13 @@ import styles from './keyboard-key.css' assert { type: 'css' };
 
     static get observedAttributes(){
       return ['shortcut', 'note', 'sound-src', 'key-type'];
+    }
+
+    handleLegendData( e ){
+      if ( e.type == 'keyboardLegendState' ){
+        this.legendData = e.detail;
+        this.render();
+      }
     }
 
     playSound( e ){
@@ -30,12 +38,14 @@ import styles from './keyboard-key.css' assert { type: 'css' };
 
     connectedCallback() {
       this.shadow.adoptedStyleSheets.push( styles );
+
+      document.addEventListener('keyboardLegendState', this.handleLegendData.bind(this));
+
       this.render();
 
       let key = this.shadow.querySelector('.key');
       key.addEventListener('click', this.playSound.bind( this ));
       document.addEventListener('keypress', this.playSound.bind( this ));
-
     }
 
     render() {
@@ -48,8 +58,8 @@ import styles from './keyboard-key.css' assert { type: 'css' };
     keyWhite(){
       return /* html */`
         <li data-note=${this.note} class="key-white key">
-          <span class='key__shortcut'>${this.shortcut}</span>
-          <span class='key__note'>${this.note}</span>
+          <span class='key__shortcut'>${ this.legendData ? this.shortcut : ''}</span>
+          <span class='key__note'>${ this.note}</span>
         </li>
       `;
     }
@@ -57,7 +67,7 @@ import styles from './keyboard-key.css' assert { type: 'css' };
     keyBlack(){
       return /* html */`
         <li data-note=${this.note} class="key-black key">
-          <span class='key__shortcut'>${this.shortcut}</span>
+          <span class='key__shortcut'>${ this.legendData ? this.shortcut : ''}</span>
           <span class='key__note'>${this.note}</span>
         </li>
       `;

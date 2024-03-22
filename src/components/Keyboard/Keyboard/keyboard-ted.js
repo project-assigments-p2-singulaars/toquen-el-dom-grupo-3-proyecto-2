@@ -1,4 +1,5 @@
 import { KeyboardOctave } from "../Octave/keyboard-octave.js";
+import { ToggleButton } from "../../ToggleButton/toggle-button.js";
 import styles from './keyboard-ted.css' assert { type: 'css' };
 
 export class KeyboardTed extends HTMLElement{
@@ -30,22 +31,14 @@ export class KeyboardTed extends HTMLElement{
     }
 
     this.shadow.innerHTML = /* html */`
-    <section id="keyboard_base">
-      <div id="kebyboard_base_buttons">
-        <div class="volume-slider">
-          <input type="range"> <span>Volume</span>
+      <section id="keyboard_base">
+        <div id="kebyboard_base_buttons">
+          <toggle-button></toggle-button>
         </div>
-        <div class="key-shortcuts">
-          <input type="checkbox"> <span>Legend & Shortcuts</span>
+        <div id="piano-keys">
+          ${octavesTemplate}
         </div>
-      </div>
-
-      </div>
-      <div id="piano-keys">
-        ${octavesTemplate}
-      </div>
-    </section>
-
+      </section>
     `;
     
   }
