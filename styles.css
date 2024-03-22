@@ -22,7 +22,7 @@ header {
   margin-left: 5rem;
 }
 
-.toquenElDomTitle {
+.title-ted {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
@@ -142,15 +142,6 @@ li {
 }
 
 /* #endregion */
-
-.cards{
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    gap: 2rem;
-    overflow-x: scroll;
-}
 
 .card__title{
     background-color: rgba(255, 199, 222, 0.945);

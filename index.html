@@ -8,53 +8,68 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="./src/components/Keyboard/Keyboard/keyboard-ted.js"></script>
+  <script type="module" src="./src/components/CarrouselSlider/CarrouselSlider/carrousel-slider.js"></script>
+  <script type="module" src="./src/components/CarrouselSlider/CarrouselCard/carrousel-card.js"></script>
   <script type="module" src="app.js"></script>
-  
 </head>
 
 <body>
 
   <header>
     <img class="logo" src="src\assets\img\logoProyecto.png" alt="Logo del proyecto">
-    <img class="toquenElDomTitle" src="src\assets\img\toquenElDomTitle.png" alt="titulo del proyecto">
+    <img class="title-ted" src="src\assets\img\toquenElDomTitle.png" alt="titulo del proyecto">
   </header>
 
   <main>
     <keyboard-ted octaves="2"></keyboard-ted>
-    
-    <section class="cards">
-      <div class="cards__card">
-        <a href="https://www.youtube.com/watch?v=kAALQ4JEY6c&list=PL92TYERZtnkSqZpcT8xlygi_FfpnecThS&ab_channel=PianoAllegroAcademiaVirtual" target="_blank"><img class="card__image" src="src\assets\img\piano2.PNG" alt="imagenPrimerVideo"></a>
-        <p class="card__title">Lección #1 Aprende a Tocar Piano DESDE CERO!!!</p>
-      </div>
-      <div class="cards__card">
-        <a href="https://www.youtube.com/watch?v=EGmLAVhShLE&ab_channel=FrancescaItalici"target="_blank"><img class="card__image" src="src\assets\img\piano4.PNG" alt="imagenSegundoVideo"></a>
-        <p class="card__title">Cómo aprender a tocar el piano-Clase 2 </p>
-      </div>
-      <div class="cards__card">
-        <a href="https://www.youtube.com/watch?v=rkP-S0U7O1w&ab_channel=PianoAllegroAcademiaVirtual" target="_blank"><img class="card__image" src="src\assets\img\piano5.PNG" alt="imagenTercerVideo"></a>
-        <p class="card__title">Lección # 3 Aprende a Tocar Piano DESDE CERO!!!</p>
-      </div>
-      <div class="cards__card">
-        <a href="https://www.youtube.com/watch?v=ZY1JIg5VRN0&ab_channel=PianoAllegroAcademiaVirtual" target="_blank"><img class="card__image" src="src\assets\img\piano6.PNG" alt="imagenCuartoVideo"></a>
-        <p class="card__title">Lección # 4 Aprende a tocar piano desde cero</p>
-      </div>
-      <div class="cards__card">
-        <a href="https://www.youtube.com/watch?v=ocPnyH1IcjA&ab_channel=FrancescaItalici" target="_blank"><img class="card__image" src="src\assets\img\piano7.PNG" alt="imagenQuintoVideo"></a>
-        <p class="card__title">Cómo aprender a tocar el piano desde cero-clase 5</p>
-      </div>
-      <div class="cards__card">
-        <a href="https://www.youtube.com/watch?v=F2YOB_nTzVw&pp=ygUOY2xhc2VzIFBpYW5vIDY%3D" target="_blank"><img class="card__image" src="src\assets\img\piano8.PNG" alt="imagenSextoVideo"></a>
-        <p class="card__title">Lección # 6 Aprende a Tocar Piano DESDE CERO!!!
-        </p>
-      </div>
-      <div class="cards__card">
-        <a href="https://www.youtube.com/watch?v=pm6v7WmGLrw&ab_channel=FrancescaItalici" target="_blank"><img class="card__image" src="src\assets\img\piano9.PNG" alt="imagenPrimerVideo"></a>
-        <p class="card__title">Cómo aprender a tocar el piano desde cero-Clase 7 </p>
-      </div>
-    </section>
-    
+
+    <carrousel-slider>
+      <carrousel-card 
+        title="Lección #1 Aprende a Tocar Piano DESDE CERO!!!" 
+        link="https://www.youtube.com/watch?v=kAALQ4JEY6c&list=PL92TYERZtnkSqZpcT8xlygi_FfpnecThS&ab_channel=PianoAllegroAcademiaVirtual" 
+        image="src\assets\img\piano2.PNG" 
+        alt-image="imagenPrimerVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Cómo aprender a tocar el piano-Clase 2" 
+        link="https://www.youtube.com/watch?v=EGmLAVhShLE&ab_channel=FrancescaItalici" 
+        image="src\assets\img\piano4.PNG" 
+        alt-image="imagenSegundoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Lección # 3 Aprende a Tocar Piano DESDE CERO!!!" 
+        link="https://www.youtube.com/watch?v=rkP-S0U7O1w&ab_channel=PianoAllegroAcademiaVirtual" 
+        image="src\assets\img\piano5.PNG" 
+        alt-image="imagenTercerVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Lección # 4 Aprende a tocar piano desde cero" 
+        link="https://www.youtube.com/watch?v=ZY1JIg5VRN0&ab_channel=PianoAllegroAcademiaVirtual" 
+        image="src\assets\img\piano6.PNG" 
+        alt-image="imagenCuartoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Cómo aprender a tocar el piano desde cero-clase 5" 
+        link="https://www.youtube.com/watch?v=ocPnyH1IcjA&ab_channel=FrancescaItalici" 
+        image="src\assets\img\piano7.PNG" 
+        alt-image="imagenQuintoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Lección # 6 Aprende a Tocar Piano DESDE CERO!!!" 
+        link="https://www.youtube.com/watch?v=F2YOB_nTzVw&pp=ygUOY2xhc2VzIFBpYW5vIDY%3D" 
+        image="src\assets\img\piano8.PNG" 
+        alt-image="imagenSextoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Cómo aprender a tocar el piano desde cero-Clase 7" 
+        link="https://www.youtube.com/watch?v=pm6v7WmGLrw&ab_channel=FrancescaItalici" 
+        image="src\assets\img\piano9.PNG" 
+        alt-image="imagenSeptimoVideo" >
+      </carrousel-card>
+    </carrousel-slider>
+
   </main>
+
 
   <footer>
     <a href="https://www.facebook.com/" target="_blank"><img src="src\assets\img\facebookLogo.png" alt="logo de facebook"></a>
