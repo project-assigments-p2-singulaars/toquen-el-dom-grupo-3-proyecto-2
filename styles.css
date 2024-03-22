@@ -10,41 +10,6 @@
   --color_grey-2: #9F9090;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.logo {
-  height: 60%;
-  margin-right: auto;
-}
-
-h1 {
-    font-family: "Jolly Lodger", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-    color: #30863E;
-    margin-right: auto;
-  }
-
-.title-ted {
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-
 :root{
 
   /* Elements */
@@ -66,121 +31,60 @@ h1 {
 
 body {
     background-image: linear-gradient(to top, #92db92, #abe4aa, #c3ecc3, #dbf4db, #f3fcf3);
-    height: 100vh;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
 }
 
 header {
-    height: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
+
+.logo {
+  height: 60%;
+  width: 60px;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Jolly Lodger", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+  color: #30863E;
+  margin-right: auto;
+}
+
+.title-ted {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
 
 main {
-    height: 80%;
-}
-
-
-
-/* #region Keyboard */
-
-#keyboard_base {
-  border-radius: 25px;
-  background-color:var(--color_backround_keyboard_base);
-}
-
-#kebyboard_base_buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  color: var(--color_Key-black--pushed);
-}
-
-#piano-keys {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.octave {
-  display: flex;
-  position: relative;
+  height: 80%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 
 /* #endregion */
-
-
-/* #region Keys */
-
-li {
- list-style: none;
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
- text-transform: capitalize;
-}
-
-.key span{
-  text-align: center;
-}
-
-.key-white {
-  width: 50px;
-  height: 240px;
-  border-radius: 15px;
-  border: 2px solid var(--color-black-1);
-  color: var(--color-text__key-white--default);
-  background-color: var(--color_background__key-white--default);
-}
-
-.key-black {
-  width: 40px;
-  height: 120px;
-  color: var(--color_white);
-  background-color: var(--color-black-1);
-  border-radius: 10px;
-  z-index: 2;
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-.key-black:hover {
-  background: var(--color_Key-black--pushed);
-}
-
-.key-white:hover {
-  background: var(--color_key-white--pushed);
-}
-
-/* #endregion */
-
-.card__title{
-    background-color: rgba(255, 199, 222, 0.945);
-    padding: 2rem;
-    margin-top: -18px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.cards__card {
-    flex-shrink: 0;
-    width: 20vw;
-    border-radius: 20px;
-}
-
-.card__image {
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
 
 
 footer{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 5rem;
-    margin-right: 2rem;
-    height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5rem;
+  margin-right: 2rem;
+  height: 10%;
+  padding-bottom: 20px;
 }
 
 
@@ -201,11 +105,3 @@ footer{
     font-size: 9px;
   }
 }
-
-
-@media screen and (orientation: portrait) and (width < 540px){
-  /* body{
-    background: red;
-  } */
-}
-
