@@ -1,18 +1,26 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toquen el DOM</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="./src/components/Keyboard/Keyboard/keyboard-ted.js"></script>
+  <script type="module" src="app.js"></script>
+  
 </head>
+
 <body>
+
+  <header>
+
+  </header>
+
   <main>
-    <h1>Toquen el DOM</h1>
-    <ul>
-      <li data-note="Q" class="key-white"></li>
-      <li data-note="W" class="key-black"></li>
-    </ul>
+    <keyboard-ted octaves="2"></keyboard-ted>
+    
     <section class="cards">
       <div class="cards__card">
         <a href="https://www.youtube.com/watch?v=kAALQ4JEY6c&list=PL92TYERZtnkSqZpcT8xlygi_FfpnecThS&ab_channel=PianoAllegroAcademiaVirtual" target="_blank"><img class="card__image" src="src\assets\img\piano2.PNG" alt="imagenPrimerVideo"></a>
@@ -43,15 +51,16 @@
         <a href="https://www.youtube.com/watch?v=pm6v7WmGLrw&ab_channel=FrancescaItalici" target="_blank"><img class="card__image" src="src\assets\img\piano9.PNG" alt="imagenPrimerVideo"></a>
         <p class="card__title">Cómo aprender a tocar el piano desde cero-Clase 7 </p>
       </div>
-
-
     </section>
   </main>
+
   <footer>
     <a href="https://www.facebook.com/" target="_blank"><img src="src\assets\img\facebookLogo.png" alt="logo de facebook"></a>
     <a href="mailto:toqueneldom@gmail.com"><img src="src\assets\img\emailLogo.png" alt="logo de email"></a>
     <a href="https://www.instagram.com/" target="_blank"><img src="src\assets\img\instagramLogo.png" alt="logo de instagram"></a>
   </footer>
-  
+
+
 </body>
+
 </html>
