@@ -50,15 +50,15 @@ function initApp(){
 
   // COMPONENTE OCTAVA
 
-  const renderOctave = () => {
+  // const renderOctave = () => {
 
-    const octave = new KeyboardOctave();
-    octave.setAttribute('octave', '1');
+  //   const octave = new KeyboardOctave();
+  //   octave.setAttribute('octave', '1');
 
-    document.body.appendChild(octave);
-  }
+  //   document.body.appendChild(octave);
+  // }
 
-  renderOctave();
+  // renderOctave();
 
 
 
