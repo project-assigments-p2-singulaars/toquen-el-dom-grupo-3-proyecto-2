@@ -37,12 +37,10 @@ body {
 
 header {
     height: 10%;
-    background-color: aqua;
 }
 
 main {
     height: 80%;
-    background-color: aliceblue;
 }
 
 
@@ -119,12 +117,11 @@ li {
 }
 
 /* #endregion */
-  
-  
+
 .cards{
     display: flex;
     justify-content: flex-start;
-    margin-top: 14em;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     gap: 2rem;
     overflow-x: scroll;
@@ -142,7 +139,6 @@ li {
     flex-shrink: 0;
     width: 20vw;
     border-radius: 20px;
-    
 }
 
 .card__image {
@@ -160,7 +156,6 @@ footer{
     gap: 5rem;
     margin-right: 2rem;
     height: 10%;
-    background-color: rebeccapurple;
 }
 
 
