@@ -1,0 +1,46 @@
+
+:host {
+  /* Colors */
+  --color-black-1: black;
+  --color-black-brown: #777171;
+  --color_white: white;
+  --color_yellow-1: #FFFDD1;
+  --color_grey-1: #2E2F2F;
+  --color_grey-2: #9F9090;
+}
+
+:host{
+
+  /* Elements */
+
+  --color_background__key-white--default: var(--color_white);
+  --color_text__key-white--default: var(--color-black-1);
+  --color_key-white--pushed: var(--color_yellow-1);
+  --color_Key-black--pushed: var(--color-black-brown);
+  --color_backround_keyboard_base: var(--color_grey-1);
+  --color_keyboard_base_text: var(--color_grey-2)
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+#keyboard_base {
+  border-radius: 25px;
+  background-color:var(--color_backround_keyboard_base);
+}
+
+#kebyboard_base_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: var(--color_Key-black--pushed);
+}
+
+#piano-keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+

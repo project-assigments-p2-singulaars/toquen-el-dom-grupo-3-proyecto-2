@@ -70,3 +70,22 @@ li {
  }
  
  /* #endregion */
+
+
+ @media only screen and (max-width: 600px) {
+  .key-white {
+    width: 25px;
+    height: 120px;
+    border-radius: 10px;
+    font-size: 9px;
+  }
+  .key-black {
+    width: 20px;
+    height: 60px;
+    border-radius: 5px;
+    z-index: 2;
+    margin-left: -10px;
+    margin-right: -10px;
+    font-size: 9px;
+  }
+}

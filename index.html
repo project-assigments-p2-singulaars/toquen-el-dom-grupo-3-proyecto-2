@@ -7,70 +7,69 @@
   <title>Toquen el DOM</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="./src/components/Keyboard/Keyboard/keyboard-ted.js"></script>
+  <script type="module" src="./src/components/CarrouselSlider/CarrouselSlider/carrousel-slider.js"></script>
+  <script type="module" src="./src/components/CarrouselSlider/CarrouselCard/carrousel-card.js"></script>
   <script type="module" src="app.js"></script>
-
-  <!-- <link rel="stylesheet" href="styles2.css"> -->
 </head>
 
 <body>
-  <main>
-    <section id="keyboard_base">
-      <div id="kebyboard_base_buttons">
-        <div class="volume-slider">
-          <input type="range"> <span>Volume</span>
-        </div>
-        <div class="key-shortcuts">
-          <input type="checkbox"> <span>Legend & Shortcuts</span>
-        </div>
-      </div>
 
-      </div>
-      <section id="piano-keys">
-        <ul class="octave" id="octave--1">
-          <li data-note="Q" class="key-white key"><span>Q</span><span>DO</span></li>
-          <li data-note="x" class="key-black key"><span>X</span></li>
-          <li data-note="w" class="key-white key"><span>W</span><span>RE</span></li>
-          <li data-note="c" class="key-black key"><span>C</span></li>
-          <li data-note="e" class="key-white key"><span>R</span><span>MI</span></li>
-          <li data-note="r" class="key-white key"><span>R</span><span>FA</span></li>
-          <li data-note="v" class="key-black key"><span>V</span></li>
-          <li data-note="t" class="key-white key"><span>T</span><span>SOL</span></li>
-          <li data-note="b" class="key-black key"><span>B</span></li>
-          <li data-note="y" class="key-white key"><span>Y</span><span>LA</span></li>
-          <li data-note="n" class="key-black key"><span>N</span></li>
-          <li data-note="u" class="key-white key"><span>U</span><span>SI</span></li>
-        </ul>
-        <ul class="octave" id="octave--2">
-          <li data-note="i" class="key-white key"><span>i</span><span>DO</span></li>
-          <li data-note="m" class="key-black key"><span>m</span></li>
-          <li data-note="o" class="key-white key"><span>o</span><span>RE</span></li>
-          <li data-note="1" class="key-black key"><span>1</span></li>
-          <li data-note="p" class="key-white key"><span>p</span><span>MI</span></li>
-          <li data-note="a" class="key-white key"><span>a</span><span>FA</span></li>
-          <li data-note="2" class="key-black key"><span>2</span></li>
-          <li data-note="s" class="key-white key"><span>s</span><span>SOL</span></li>
-          <li data-note="3" class="key-black key"><span>3</span></li>
-          <li data-note="d" class="key-white key"><span>d</span><span>LA</span></li>
-          <li data-note="4" class="key-black key"><span>4</span></li>
-          <li data-note="f" class="key-white key"><span>f</span><span>SI</span></li>
-        </ul>
-        <ul class="octave" id="octave--3">
-          <li data-note="g" class="key-white key"><span>g</span><span>DO</span></li>
-          <li data-note="5" class="key-black key"><span>5</span></li>
-          <li data-note="h" class="key-white key"><span>h</span><span>RE</span></li>
-          <li data-note="6" class="key-black key"><span>6</span></li>
-          <li data-note="j" class="key-white key"><span>j</span><span>MI</span></li>
-          <li data-note="k" class="key-white key"><span>k</span><span>FA</span></li>
-          <li data-note="7" class="key-black key"><span>7</span></li>
-          <li data-note="l" class="key-white key"><span>l</span><span>SOL</span></li>
-          <li data-note="8" class="key-black key"><span>8</span></li>
-          <li data-note="ñ" class="key-white key"><span>ñ</span><span>LA</span></li>
-          <li data-note="9" class="key-black key"><span>9</span></li>
-          <li data-note="z" class="key-white key"><span>z</span><span>SI</span></li>
-        </ul>
-      </section>
-    </section>
+  <header>
+    <img class="logo" src="src\assets\img\logoProyecto.png" alt="Logo del proyecto">
+    <img class="title-ted" src="src\assets\img\toquenElDomTitle.png" alt="titulo del proyecto">
+  </header>
+
+  <main>
+    <keyboard-ted octaves="2"></keyboard-ted>
+
+    <carrousel-slider>
+      <carrousel-card 
+        title="Lección #1 Aprende a Tocar Piano DESDE CERO!!!" 
+        link="https://www.youtube.com/watch?v=kAALQ4JEY6c&list=PL92TYERZtnkSqZpcT8xlygi_FfpnecThS&ab_channel=PianoAllegroAcademiaVirtual" 
+        image="src\assets\img\piano2.PNG" 
+        alt-image="imagenPrimerVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Cómo aprender a tocar el piano-Clase 2" 
+        link="https://www.youtube.com/watch?v=EGmLAVhShLE&ab_channel=FrancescaItalici" 
+        image="src\assets\img\piano4.PNG" 
+        alt-image="imagenSegundoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Lección # 3 Aprende a Tocar Piano DESDE CERO!!!" 
+        link="https://www.youtube.com/watch?v=rkP-S0U7O1w&ab_channel=PianoAllegroAcademiaVirtual" 
+        image="src\assets\img\piano5.PNG" 
+        alt-image="imagenTercerVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Lección # 4 Aprende a tocar piano desde cero" 
+        link="https://www.youtube.com/watch?v=ZY1JIg5VRN0&ab_channel=PianoAllegroAcademiaVirtual" 
+        image="src\assets\img\piano6.PNG" 
+        alt-image="imagenCuartoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Cómo aprender a tocar el piano desde cero-clase 5" 
+        link="https://www.youtube.com/watch?v=ocPnyH1IcjA&ab_channel=FrancescaItalici" 
+        image="src\assets\img\piano7.PNG" 
+        alt-image="imagenQuintoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Lección # 6 Aprende a Tocar Piano DESDE CERO!!!" 
+        link="https://www.youtube.com/watch?v=F2YOB_nTzVw&pp=ygUOY2xhc2VzIFBpYW5vIDY%3D" 
+        image="src\assets\img\piano8.PNG" 
+        alt-image="imagenSextoVideo" >
+      </carrousel-card>
+      <carrousel-card 
+        title="Cómo aprender a tocar el piano desde cero-Clase 7" 
+        link="https://www.youtube.com/watch?v=pm6v7WmGLrw&ab_channel=FrancescaItalici" 
+        image="src\assets\img\piano9.PNG" 
+        alt-image="imagenSeptimoVideo" >
+      </carrousel-card>
+    </carrousel-slider>
+
   </main>
+
 
   <footer>
     <a href="https://www.facebook.com/" target="_blank"><img src="src\assets\img\facebookLogo.png" alt="logo de facebook"></a>
@@ -78,9 +77,6 @@
     <a href="https://www.instagram.com/" target="_blank"><img src="src\assets\img\instagramLogo.png" alt="logo de instagram"></a>
   </footer>
 
-
-  <!-- <ted-keyboard octaves="3">
-  </ted-keyboard> -->
 
 </body>
 

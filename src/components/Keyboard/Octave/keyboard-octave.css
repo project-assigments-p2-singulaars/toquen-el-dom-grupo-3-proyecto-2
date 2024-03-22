@@ -1,4 +1,5 @@
 .octave {
   display: flex;
   position: relative;
+  padding-left: 0;
 }
